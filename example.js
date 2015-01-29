@@ -30,9 +30,8 @@ var nestedBackboneAttributeSample = Backbone.Model.extend({
 		console.log("Nested Object retrieved =>");
 		console.log(ref);
 
-		// if this.attributes.nestedObj has the property and
-		// value is defined
-		if (ref.hasOwnProperty(property) && value != undefined) {
+		// if this.attributes.nestedObj has the property
+		if (ref.hasOwnProperty(property)) {
 
 			ref[property] = value;
 			this.set({ nestedObj: ref });
